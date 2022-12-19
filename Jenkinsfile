@@ -26,9 +26,4 @@ pipeline {
         }
         
     }
-    //post {
-    //    success {
-    //            archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
-    //    } 
-    //}
 }
