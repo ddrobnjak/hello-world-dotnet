@@ -1,19 +1,20 @@
-# hello-world
-How to create .NET Core Console
+## 1 - Create pipeline Jenkins job for .NET project
 
-Tutorial:
-https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code
+### Install .NET SDK Plugin
 
-Summary:
-#1 Install Visual Studio Code. https://code.visualstudio.com/ 
-#2 Install the .NET Core SDK. https://dotnet.microsoft.com/download 
-#3 Install the C# extension for Visual Studio Code. https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp 
-#4 Terminal : dotnet new console
-#5 Terminal : dotnet run
+1) Go to **Manage Jenkins** -> **Manage Plugins**
+2) Select Available plugins and search **.NET SDK Support**, check install and click **Install without restart**
 
-To Debug:
-#1 Install Micros .NET Framework 4.7 or above. https://dotnet.microsoft.com/download/thank-you/net48-developer-pack 
-#2 Setup launch.json "program" path
-#3 Create tasks.json (Hit F1, "Tasks: Configure Task Runner")
-#4 Choose .NET Core Launch (console)
-#5 Breakpoint & start application
+### Add .NET SDK Installation
+
+1) Go to **Manage Jenkins** -> **Global Tool Configuration**
+2) Find **.NET SDK** section and click Add **.NET SDK**
+3) Add name for .NET SDK installation, check **Install automatically**, choose .NET version, Release, SDK and platform and **Save** changes
+
+### Create Jenkins pipeline job
+
+1) Go to **Jenkins Dashboard** and click **New Item**, enter Item Name and choose **Pipeline**
+2) Create Jenkinsfile on Repository and add pipeline code inside
+3) In Pipeline section select **Pipeline script from SCM** and choose **Git**
+4) Provide Repository URL and Credentials created in previous steps, and select which Branch to build and fill Script path with path to Jenkinsfile on Repository
+5) **Save** changes and click **Build now**
