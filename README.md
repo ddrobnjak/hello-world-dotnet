@@ -12,9 +12,9 @@
 3) Add name for .NET SDK installation, check **Install automatically**, choose .NET version, Release, SDK and platform and **Save** changes
 
 ### Create Jenkins pipeline job
-
-1) Go to **Jenkins Dashboard** and click **New Item**, enter Item Name and choose **Pipeline**
-2) Create Jenkinsfile on Repository and add pipeline code inside
+    
+1) Create Jenkinsfile on Repository and add pipeline code inside
+2) Go to **Jenkins Dashboard** and click **New Item**, enter Item Name and choose **Pipeline**
 3) In Pipeline section select **Pipeline script from SCM** and choose **Git**
 4) Provide Repository URL and Credentials created in previous steps, and select which Branch to build and fill Script path with path to Jenkinsfile on Repository
 5) **Save** changes and click **Build now**
